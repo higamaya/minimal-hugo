@@ -1,0 +1,20 @@
+{
+  "name": "minimal-hugo",
+  "version": "1.0.0",
+  "description": "Higama-ya's website for Chrome Web Store",
+  "private": true,
+  "author": "Higama-ya",
+  "license": "MIT",
+  "homepage": "https://github.com/higamaya/minimal-hugo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/higamaya/minimal-hugo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/higamaya/minimal-hugo/issues"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.1",
+    "prettier-plugin-go-template": "^0.0.13"
+  }
+}

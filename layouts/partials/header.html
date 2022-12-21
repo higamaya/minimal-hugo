@@ -1,0 +1,14 @@
+<header translate="no">
+  <img
+    class="header__logo"
+    src="{{ .Site.Params.logo.url }}"
+    width="{{ .Site.Params.logo.width }}"
+    height="{{ .Site.Params.logo.height }}"
+    alt="logo"
+  />
+  <span class="header__title">{{ .Site.Title }}</span>
+
+  {{ with .Site.Params.description }}
+    <span class="header__description">{{ . }}</span>
+  {{ end }}
+</header>

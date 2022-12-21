@@ -1,0 +1,51 @@
+<footer translate="no">
+  <div>
+    {{ with .Site.Copyright }}<span class="footer__separator"> | </span><span>{{ . }}</span>{{ end }}
+    {{ with .Site.Author.github_url }}
+      <span class="footer__separator"> | </span><a href="{{ . }}" target="_blank" rel="noopener">GitHub</a>
+    {{ end }}
+    {{ with .Site.Author.twitter_url }}
+      <span class="footer__separator"> | </span><a href="{{ . }}" target="_blank" rel="noopener">Twitter</a>
+    {{ end }}
+    {{ with .Site.Author.email }}<span class="footer__separator"> | </span><span>{{ . }}</span>{{ end }}
+    <span class="footer__separator"> | </span>
+  </div>
+  <div>
+    <span class="footer__separator"> | </span>
+    powered by <a href="https://gohugo.io/" title="Hugo" target="_blank" rel="noopener">Hugo</a> and
+    <a href="https://oxal.org/projects/sakura/" title="sakura" target="_blank" rel="noopener">sakura</a>
+    {{ with .Site.GoogleAnalytics }}
+      <span class="footer__separator"> | </span>using
+      <span class="google-analytics">
+        <a href="#" onclick="return false;" title="Google Analytics">Google Analytics</a>
+        <dialog class="google-analytics__statement" translate="yes">
+          <p>
+            This site uses Google Analytics to monitor its traffic. For more information about privacy protection at
+            Google Analytics, please refer to the following links:
+          </p>
+          <ul>
+            <li>
+              <a
+                href="https://www.google.com/policies/privacy/partners/"
+                title="Google's Privacy & Terms"
+                target="_blank"
+                rel="noopener"
+                >Google's Privacy & Terms</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://support.google.com/analytics/answer/6004245"
+                title="Safeguarding your data"
+                target="_blank"
+                rel="noopener"
+                >Safeguarding your data</a
+              >
+            </li>
+          </ul>
+        </dialog>
+      </span>
+    {{ end }}
+    <span class="footer__separator"> | </span>
+  </div>
+</footer>
