@@ -3,7 +3,9 @@
  * Minimal css theme.
  * Project: https://github.com/oxalorg/sakura/
  */
-/* Body */
+ 
+/* Developed by Higama-ya based on Sakura.css */
+
 html {
   font-size: 62.5%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -135,7 +137,6 @@ video {
   margin-bottom: 2.5rem;
 }
 
-/* Pre and Code */
 pre {
   background-color: #f1f1f1;
   display: block;
@@ -162,7 +163,6 @@ pre > code {
   font-size: 1em;
 }
 
-/* Tables */
 table {
   text-align: justify;
   width: 100%;
@@ -175,7 +175,6 @@ th {
   border-bottom: 1px solid #f1f1f1;
 }
 
-/* Buttons, forms and input */
 input,
 textarea {
   border: 1px solid #4a4a4a;
@@ -238,7 +237,6 @@ select,
 input {
   color: #4a4a4a;
   padding: 6px 10px;
-  /* The 6px vertically centers text on FF, ignored by Webkit */
   margin-bottom: 10px;
   background-color: #f1f1f1;
   border: 1px solid #f1f1f1;
