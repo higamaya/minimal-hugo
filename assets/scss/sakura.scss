@@ -6,6 +6,10 @@
 
 /* Developed by Higama-ya based on Sakura.css */
 
+/* ********************************************************************************
+ * Define colors
+ */
+
 :root {
   --sakura-text-primary-color: #4a4a4a;
   --sakura-text-secondary-color: #1d7484;
@@ -26,6 +30,29 @@
   }
 }
 
+/* ********************************************************************************
+ * Reset & Define base styles
+ */
+
+* {
+  outline-offset: 0.2em;
+  text-underline-offset: 0.2em;
+  font-size: inherit;
+  font-weight: 400;
+}
+
+:focus {
+  outline-color: var(--sakura-text-primary-color);
+}
+
+:any-link {
+  color: inherit;
+}
+
+/* ********************************************************************************
+ * Define styles for each
+ */
+
 html {
   font-size: 62.5%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -39,16 +66,12 @@ body {
   color: var(--sakura-text-primary-color);
   background-color: var(--sakura-background-color);
   padding: 13px;
-}
 
-@media (max-width: 684px) {
-  body {
+  @media (max-width: 684px) {
     font-size: 1.53rem;
   }
-}
 
-@media (max-width: 382px) {
-  body {
+  @media (max-width: 382px) {
     font-size: 1.35rem;
   }
 }
@@ -60,7 +83,6 @@ h4,
 h5,
 h6 {
   line-height: 1.1;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   font-weight: 700;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
