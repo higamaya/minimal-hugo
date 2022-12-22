@@ -134,15 +134,15 @@ hr {
 a {
   text-decoration: none;
   color: var(--sakura-text-secondary-color);
-}
 
-a:visited {
-  color: var(--sakura-text-secondary-sub-color);
-}
+  &:visited {
+    color: var(--sakura-text-secondary-sub-color);
+  }
 
-a:hover {
-  color: var(--sakura-text-focus-color);
-  border-bottom: 2px solid var(--sakura-text-primary-color);
+  &:hover {
+    color: var(--sakura-text-focus-color);
+    border-bottom: 2px solid var(--sakura-text-primary-color);
+  }
 }
 
 ul {
@@ -165,10 +165,10 @@ blockquote {
   border-left: 5px solid var(--sakura-text-secondary-color);
   margin-bottom: 2.5rem;
   background-color: var(--sakura-background-sub-color);
-}
 
-blockquote p {
-  margin-bottom: 0;
+  p {
+    margin-bottom: 0;
+  }
 }
 
 img,
@@ -220,11 +220,10 @@ th {
 input,
 textarea {
   border: 1px solid var(--sakura-text-primary-color);
-}
 
-input:focus,
-textarea:focus {
-  border: 1px solid var(--sakura-text-secondary-color);
+  &:focus {
+    border: 1px solid var(--sakura-text-secondary-color);
+  }
 }
 
 textarea {
@@ -247,36 +246,24 @@ input[type="button"] {
   border: 1px solid var(--sakura-text-secondary-color);
   cursor: pointer;
   box-sizing: border-box;
+
+  &[disabled] {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &:focus:enabled,
+  &:hover:enabled {
+    background-color: var(--sakura-text-focus-color);
+    border-color: var(--sakura-text-focus-color);
+    color: var(--sakura-background-color);
+    outline: 0;
+  }
 }
 
-.button[disabled],
-button[disabled],
-input[type="submit"][disabled],
-input[type="reset"][disabled],
-input[type="button"][disabled] {
-  cursor: default;
-  opacity: 0.5;
-}
-
-.button:focus:enabled,
-.button:hover:enabled,
-button:focus:enabled,
-button:hover:enabled,
-input[type="submit"]:focus:enabled,
-input[type="submit"]:hover:enabled,
-input[type="reset"]:focus:enabled,
-input[type="reset"]:hover:enabled,
-input[type="button"]:focus:enabled,
-input[type="button"]:hover:enabled {
-  background-color: var(--sakura-text-focus-color);
-  border-color: var(--sakura-text-focus-color);
-  color: var(--sakura-background-color);
-  outline: 0;
-}
-
+input,
 textarea,
-select,
-input {
+select {
   color: var(--sakura-text-primary-color);
   padding: 6px 10px;
   margin-bottom: 10px;
@@ -285,13 +272,11 @@ input {
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
-}
 
-textarea:focus,
-select:focus,
-input:focus {
-  border: 1px solid var(--sakura-text-secondary-color);
-  outline: 0;
+  &:focus {
+    border: 1px solid var(--sakura-text-secondary-color);
+    outline: 0;
+  }
 }
 
 input[type="checkbox"]:focus {
