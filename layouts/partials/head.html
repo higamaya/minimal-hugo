@@ -2,8 +2,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ if not .IsHome }}{{ .Title }}&#x0020;&#x2013;&#x0020;{{ end }}{{ .Site.Title }}</title>
 
-  <link rel="stylesheet" href="/css/sakura.css" media="screen" />
-  <link rel="stylesheet" href="/css/sakura-dark.css" media="screen and (prefers-color-scheme: dark)" />
+  <link rel="stylesheet" href="/css/sakura.css" />
 
   {{ $options := (dict "targetPath" "css/minimal-hugo.css" "enableSourceMap" (not hugo.IsProduction)) }}
   {{ $style := resources.Get "scss/minimal-hugo.scss" | resources.ToCSS $options }}
