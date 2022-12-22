@@ -1,11 +1,13 @@
 <footer translate="no">
   <div>
     {{ with .Site.Copyright }}<span class="footer__separator"> | </span><span>{{ . }}</span>{{ end }}
-    {{ with .Site.Author.github_url }}
-      <span class="footer__separator"> | </span><a href="{{ . }}" target="_blank" rel="noopener">GitHub</a>
+    {{ with .Site.Social.github }}
+      <span class="footer__separator"> | </span
+      ><a href="https://github.com/{{ . }}" target="_blank" rel="noopener">GitHub</a>
     {{ end }}
-    {{ with .Site.Author.twitter_url }}
-      <span class="footer__separator"> | </span><a href="{{ . }}" target="_blank" rel="noopener">Twitter</a>
+    {{ with .Site.Social.twitter }}
+      <span class="footer__separator"> | </span
+      ><a href="https://twitter.com/{{ . }}" target="_blank" rel="noopener">Twitter</a>
     {{ end }}
     {{ with .Site.Author.email }}<span class="footer__separator"> | </span><span>{{ . }}</span>{{ end }}
     <span class="footer__separator"> | </span>
