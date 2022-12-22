@@ -1,9 +1,10 @@
 <header translate="no">
+  {{ $logo := resources.Get .Site.Params.logo }}
   <img
     class="header__logo"
-    src="{{ .Site.Params.logo.url }}"
-    width="{{ .Site.Params.logo.width }}"
-    height="{{ .Site.Params.logo.height }}"
+    src="{{ $logo.RelPermalink }}"
+    width="{{ $logo.Width }}"
+    height="{{ $logo.Height }}"
     alt="logo"
   />
   <span class="header__title">{{ .Site.Title }}</span>

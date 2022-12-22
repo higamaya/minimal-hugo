@@ -6,7 +6,8 @@
   {{ $style := resources.Get "scss/minimal-hugo.scss" | resources.ToCSS $options }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
-  <link rel="shortcut icon" href="{{ .Site.Params.logo.url }}" type="{{ .Site.Params.logo.type }}" />
+  {{ $logo := resources.Get .Site.Params.logo }}
+  <link rel="shortcut icon" href="{{ $logo.RelPermalink }}" />
 
   {{ if .IsHome }}
     <meta name="description" content="{{ .Site.Params.description }} by {{ .Site.Author.name }}" />
@@ -20,6 +21,8 @@
   <link rel="canonical" href="{{ .Permalink }}" />
 
   {{ template "_internal/schema.html" . }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
   {{ template "_internal/google_analytics.html" . }}
   {{ hugo.Generator }}
 </head>
