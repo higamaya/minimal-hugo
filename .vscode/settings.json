@@ -15,5 +15,8 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["Higama"]
+  "cSpell.words": [
+    "Higama",
+    "licenselink"
+  ]
 }
