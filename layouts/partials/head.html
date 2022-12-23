@@ -6,8 +6,10 @@
   {{ $style := resources.Get "scss/minimal-hugo.scss" | resources.ToCSS $options }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
-  {{ $logo := resources.Get .Site.Params.logo }}
-  <link rel="shortcut icon" href="{{ $logo.RelPermalink }}" />
+  {{ with .Site.Params.logo }}
+    {{ $logo := resources.Get . }}
+    <link rel="shortcut icon" href="{{ $logo.RelPermalink }}" />
+  {{ end }}
 
   {{ if .IsHome }}
     <meta name="description" content="{{ .Site.Params.description }} by {{ .Site.Author.name }}" />

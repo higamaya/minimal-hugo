@@ -1,12 +1,16 @@
 <header translate="no">
-  {{ $logo := resources.Get .Site.Params.logo }}
-  <img
-    class="header__logo"
-    src="{{ $logo.RelPermalink }}"
-    width="{{ $logo.Width }}"
-    height="{{ $logo.Height }}"
-    alt="logo"
-  />
+  {{ with .Site.Params.logo }}
+    {{ $logo := resources.Get . }}
+    <img
+      class="header__logo"
+      src="{{ $logo.RelPermalink }}"
+      width="{{ $logo.Width }}"
+      height="{{ $logo.Height }}"
+      alt="logo"
+    />
+  {{ end }}
+
+
   <span class="header__title">{{ .Site.Title }}</span>
 
   {{ with .Site.Params.description }}
