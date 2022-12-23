@@ -30,11 +30,14 @@ header {
 
   .header__title {
     font-weight: bold;
-    margin-inline: 0.3em;
   }
 
   .header__description {
     font-size: 0.5em;
+  }
+
+  :not(:last-child) {
+    margin-inline-end: 0.3em;
   }
 }
 
@@ -45,8 +48,12 @@ nav {
 
     li {
       display: inline;
-      margin: 0 3% 0 0;
+      margin: 0;
       text-transform: uppercase;
+
+      &:not(:last-child) {
+        margin-inline-end: 3%;
+      }
     }
   }
 }
