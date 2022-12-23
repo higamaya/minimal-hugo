@@ -3,13 +3,13 @@
     {{ with .Site.Copyright }}<span class="footer__separator"> | </span><span>{{ . }}</span>{{ end }}
     {{ with .Site.Social.github }}
       <span class="footer__separator"> | </span
-      ><a href="https://github.com/{{ . }}" target="_blank" rel="noopener">GitHub</a>
+      ><a href="https://github.com/{{ . }}" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
     {{ end }}
     {{ with .Site.Social.twitter }}
       <span class="footer__separator"> | </span
-      ><a href="https://twitter.com/{{ . }}" target="_blank" rel="noopener">Twitter</a>
+      ><a href="https://twitter.com/{{ . }}" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i> Twitter</a>
     {{ end }}
-    {{ with .Site.Author.email }}<span class="footer__separator"> | </span><span>{{ . }}</span>{{ end }}
+    {{ with .Site.Author.email }}<span class="footer__separator"> | </span><span><i class="fa-solid fa-envelope"></i> {{ . }}</span>{{ end }}
     <span class="footer__separator"> | </span>
   </div>
   <div>
