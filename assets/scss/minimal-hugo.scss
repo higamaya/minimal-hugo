@@ -77,12 +77,8 @@ footer {
 
 .google-analytics {
   .google-analytics__statement {
-    display: block;
-    position: fixed;
-    box-sizing: border-box;
-    max-width: 90%;
-    width: 30em;
     top: 100lvh;
+    transform: translateY(0);
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s;
