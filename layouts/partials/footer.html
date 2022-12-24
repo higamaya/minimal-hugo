@@ -2,20 +2,32 @@
   <div>
     {{ with .Site.Copyright }}<span class="footer__separator"> | </span><span>{{ . }}</span>{{ end }}
     {{ with .Site.Social.github }}
-      <span class="footer__separator"> | </span
-      ><a href="https://github.com/{{ . }}" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+      <span class="footer__separator"> | </span>
+      {{ partial "link.html" (dict "Site" $.Site
+        "url" (print "https://github.com/" .)
+        "title" "Github"
+        "content" `<i class="fa-brands fa-github"></i> GitHub`)
+      }}
     {{ end }}
     {{ with .Site.Social.twitter }}
-      <span class="footer__separator"> | </span
-      ><a href="https://twitter.com/{{ . }}" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i> Twitter</a>
+      <span class="footer__separator"> | </span>
+      {{ partial "link.html" (dict "Site" $.Site
+        "url" (print "https://twitter.com/" .)
+        "title" "Twitter"
+        "content" `<i class="fa-brands fa-twitter"></i> Twitter`)
+      }}
     {{ end }}
-    {{ with .Site.Author.email }}<span class="footer__separator"> | </span><span><i class="fa-solid fa-envelope"></i> {{ . }}</span>{{ end }}
+    {{ with .Site.Author.email }}
+      <span class="footer__separator"> | </span><span><i class="fa-solid fa-envelope"></i> {{ . }}</span>
+    {{ end }}
     <span class="footer__separator"> | </span>
   </div>
   <div>
     <span class="footer__separator"> | </span>
-    powered by <a href="https://gohugo.io/" title="Hugo" target="_blank" rel="noopener">Hugo</a> and
-    <a href="https://oxal.org/projects/sakura/" title="sakura" target="_blank" rel="noopener">sakura</a>
+    powered by
+    {{ partial "link.html" (dict "Site" $.Site "url" "https://gohugo.io/" "title" "Hugo" "content" "Hugo") }}
+    and
+    {{ partial "link.html" (dict "Site" $.Site "url" "https://oxal.org/projects/sakura/" "title" "sakura" "content" "sakura") }}
     {{ with .Site.GoogleAnalytics }}
       <span class="footer__separator"> | </span>using
       <span class="google-analytics">
@@ -27,22 +39,18 @@
           </p>
           <ul>
             <li>
-              <a
-                href="https://www.google.com/policies/privacy/partners/"
-                title="Google's Privacy & Terms"
-                target="_blank"
-                rel="noopener"
-                >Google's Privacy & Terms</a
-              >
+              {{ partial "link.html" (dict "Site" $.Site
+                "url" "https://www.google.com/policies/privacy/partners/"
+                "title" "Google's Privacy & Terms"
+                "content" "Google's Privacy & Terms")
+              }}
             </li>
             <li>
-              <a
-                href="https://support.google.com/analytics/answer/6004245"
-                title="Safeguarding your data"
-                target="_blank"
-                rel="noopener"
-                >Safeguarding your data</a
-              >
+              {{ partial "link.html" (dict "Site" $.Site
+                "url" "https://support.google.com/analytics/answer/6004245"
+                "title" "Safeguarding your data"
+                "content" "Safeguarding your data")
+              }}
             </li>
           </ul>
         </dialog>

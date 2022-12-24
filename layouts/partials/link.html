@@ -1,0 +1,8 @@
+<a
+  href="{{ .url }}"
+  title="{{ .title }}"
+  {{ if and (.Site.Params.Theme.externalLinkInNewTab) (strings.HasPrefix .url "http") }}
+    target="_blank" rel="noopener"
+  {{ end }}
+  >{{ .content | safeHTML }}</a
+>

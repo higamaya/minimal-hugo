@@ -1,6 +1,9 @@
 <a
   href="{{ .Destination | safeURL }}"
-  {{ with .Title }}title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }}
+  {{ with .Title }}
+    title="{{ . }}"
+  {{ end }}
+  {{ if and (.Page.Site.Params.Theme.externalLinkInNewTab) (strings.HasPrefix .Destination "http") }}
     target="_blank" rel="noopener"
   {{ end }}
   >{{ .Text | safeHTML }}</a
