@@ -97,12 +97,20 @@ h5,
 h6 {
   line-height: 1.1;
   font-weight: 700;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  margin-block-start: 3rem;
+  margin-block-end: 1.5rem;
   overflow-wrap: break-word;
   word-wrap: break-word;
   -ms-word-break: break-all;
   word-break: break-word;
+
+  &:first-child {
+    margin-block-start: 0;
+  }
+
+  &:last-child {
+    margin-block-end: 0;
+  }
 }
 
 h1 {
@@ -130,8 +138,8 @@ h6 {
 }
 
 p {
-  &:not(:last-child) {
-    margin-bottom: 2.5rem;
+  &:where(:not(:last-child)) {
+    margin-block-end: 2.5rem;
   }
 }
 
@@ -162,13 +170,13 @@ a {
 ul {
   padding-left: 1.4em;
 
-  &:not(:last-child) {
-    margin-bottom: 2.5rem;
+  &:where(:not(:last-child)) {
+    margin-block-end: 2.5rem;
   }
 }
 
 li {
-  margin-bottom: 0.4em;
+  margin-block-end: 0.4em;
 }
 
 blockquote {
@@ -179,8 +187,8 @@ blockquote {
   border-left: 5px solid var(--sakura-text-secondary-color);
   background-color: var(--sakura-background-sub-color);
 
-  &:not(:last-child) {
-    margin-bottom: 2.5rem;
+  &:where(:not(:last-child)) {
+    margin-block-end: 2.5rem;
   }
 }
 
@@ -189,8 +197,8 @@ video {
   height: auto;
   max-width: 100%;
 
-  &:not(:last-child) {
-    margin-bottom: 2.5rem;
+  &:where(:not(:last-child)) {
+    margin-block-end: 2.5rem;
   }
 }
 
@@ -200,8 +208,9 @@ pre {
   padding: 1em;
   overflow-x: auto;
   font-size: 0.9em;
-  &:not(:last-child) {
-    margin-bottom: 2.5rem;
+
+  &:where(:not(:last-child)) {
+    margin-block-end: 2.5rem;
   }
 }
 
@@ -216,7 +225,7 @@ var {
   white-space: pre-wrap;
 }
 
-pre > code {
+pre > :where(code) {
   background-color: transparent;
   white-space: pre;
   font-size: 1em;
@@ -289,8 +298,8 @@ select {
   box-shadow: none;
   box-sizing: border-box;
 
-  &:not(:last-child) {
-    margin-bottom: 10px;
+  &:where(:not(:last-child)) {
+    margin-block-end: 10px;
   }
 
   &:focus {
@@ -309,8 +318,8 @@ fieldset {
   display: block;
   font-weight: 500;
 
-  &:not(:last-child) {
-    margin-bottom: 0.5rem;
+  &:where(:not(:last-child)) {
+    margin-block-end: 0.5rem;
   }
 }
 
