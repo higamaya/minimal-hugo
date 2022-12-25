@@ -1,5 +1,6 @@
 # Minimal Hugo
 
-A minimal Hugo theme used in Higama-ya's website.
+A minimal Hugo theme used in the following Higama-ya's websites.
 
-:construction::construction::construction: **WORK IN PROGRESS** :construction::construction::construction:
+- [higamaya.com](https://higamaya.com/) ([Repo](https://github.com/higamaya/higamaya.com))
+- [chrome-web-store.higamaya.com](https://chrome-web-store.higamaya.com/) ([Repo](https://github.com/higamaya/chrome-web-store))
