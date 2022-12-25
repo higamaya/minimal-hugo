@@ -8,6 +8,16 @@
   {{ $style := resources.Get "scss/minimal-hugo.scss" | resources.ToCSS $options }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
+  {{ with .Site.Params.Theme.Style.sass }}
+    {{ $options := (dict "targetPath" .target "enableSourceMap" (not hugo.IsProduction)) }}
+    {{ $style := resources.Get .source | resources.ToCSS $options }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+  {{ end }}
+
+  {{ with .Site.Params.Theme.Style.css }}
+    <link rel="stylesheet" href="{{ relURL . }}" />
+  {{ end }}
+
   {{ with .Site.Params.Theme.logo }}
     {{ $logo := resources.Get . }}
     <link rel="shortcut icon" href="{{ $logo.RelPermalink }}" />
