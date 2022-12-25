@@ -20,7 +20,7 @@
   {{ end }}
   {{ if not .Site.Params.Theme.Footer.hideEmail }}
     {{ with .Site.Author.email }}
-      <span class="footer__separator"> | </span><span><i class="fa-solid fa-envelope"></i> {{ . }}</span>
+      <span class="footer__separator"> | </span><a href="mailto:{{ . }}"><i class="fa-solid fa-envelope"></i> Email</a>
     {{ end }}
   {{ end }}
   {{ if not .Site.Params.Theme.Footer.oneLine }}
