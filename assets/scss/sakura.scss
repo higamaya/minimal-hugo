@@ -72,7 +72,7 @@ html {
 }
 
 body {
-  font-size: 1.8rem;
+  font-size: 1.8em;
   line-height: 1.618;
   max-width: 38em;
   margin: auto;
@@ -81,11 +81,11 @@ body {
   padding: 13px;
 
   @media (max-width: 684px) {
-    font-size: 1.53rem;
+    font-size: 1.53em;
   }
 
   @media (max-width: 382px) {
-    font-size: 1.35rem;
+    font-size: 1.35em;
   }
 }
 
