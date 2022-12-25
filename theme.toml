@@ -1,7 +1,7 @@
 name = "minimal-hugo"
 license = "MIT"
 licenselink = "https://github.com/higamaya/minimal-hugo/blob/main/LICENSE"
-description = "A minimal Hugo theme used in Higama-ya's website."
+description = "A minimal Hugo theme used in Higama-ya's websites."
 homepage = "https://github.com/higamaya/minimal-hugo"
 tags = ["minimal", "personal"]
 min_version = "0.41.0"

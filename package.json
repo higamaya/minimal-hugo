@@ -1,7 +1,7 @@
 {
   "name": "minimal-hugo",
   "version": "1.0.0",
-  "description": "Higama-ya's website for Chrome Web Store",
+  "description": "A minimal Hugo theme used in Higama-ya's websites.",
   "private": true,
   "author": "Higama-ya",
   "license": "MIT",
