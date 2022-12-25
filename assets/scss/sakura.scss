@@ -17,10 +17,8 @@
   --sakura-text-focus-color: #982c61;
   --sakura-background-color: #f9f9f9;
   --sakura-background-sub-color: #f1f1f1;
-}
 
-@media screen and (prefers-color-scheme: dark) {
-  :root {
+  @media screen and (prefers-color-scheme: dark) {
     --sakura-text-primary-color: #c8c8c8;
     --sakura-text-secondary-color: #ffffff;
     --sakura-text-secondary-sub-color: #f1f1f1;
